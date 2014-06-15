@@ -1,0 +1,70 @@
+<html class = "home">
+<div class="header" id="header">
+  <div class="col-md-4">
+    <div class="titleHeader">
+        <a href="#/home">FIFA Ballon d'Or   <small><span class="label label-warning">2013</span></small></a>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class = "buttons">
+      <ul class="nav nav-pills nav-justified">
+        <li><a href="#/home">Accueil</a></li>
+        <li class="active"><a href="#/votes">Votes</a></li>
+        <li><a href="#/graph">Graphiques</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="body">
+  </br></br>
+  <ul class="pagination ">
+    <li><a ng-click='selectionPage(0)'>Début</a></li>
+    <li><a ng-click='previousPage()'>&laquo;</a></li>
+    <li><a ng-click='selectionPage(buttonPagination1)'>{{buttonPagination1}}</a></li>
+    <li><a ng-click='selectionPage(buttonPagination2)'>{{buttonPagination2}}</a></li>
+    <li><a ng-click='selectionPage(buttonPagination3)'>{{buttonPagination3}}</a></li>
+    <li><a ng-click='selectionPage(buttonPagination4)'>{{buttonPagination4}}</a></li>
+    <li><a ng-click='selectionPage(buttonPagination5)'>{{buttonPagination5}}</a></li>
+    <li><a ng-click='nextPage()'>&raquo;</a></li>
+    <li><a ng-click='selectionPage(voies.nhits/voies.parameters.rows -1)'>Fin</a></li>
+  </ul>
+    <form  id="search">
+      <input id="searchInput" name="q" type="text" size="40" placeholder="Search..." ng-model="searchText" />
+    </form>
+  </br>
+  <div class="panel panel-default" id="votePanel">
+    <!-- Default panel contents -->
+    <div class="panel-heading" id="head">
+      <h2>Liste des votes</h2>
+    </div>
+
+    <!-- Table -->
+    <table class="table" id="searchTextResults">
+        <tr > 
+            <td ng-repeat="(i,facet) in voies.parameters.facet" ng-click="toggleSort(i)">{{voies.parameters.facet[i]}} <i class="fa fa-sort"></i></td>
+        </tr>
+    <tr ng-repeat="r in voies.records | orderBy:sortColumn:reverse | filter:searchText">
+      <td class="joueur" ng-click="searchValue(r.fields.joueur)">{{r.fields.joueur}}</td>
+      <td class="joueur" ng-click="searchValue(r.fields.point)">{{r.fields.point}}</td>
+      <td class="joueur" ng-click="searchValue(r.fields.poste)">{{r.fields.poste}}</td>
+      <td class="joueur" ng-click="searchValue(r.fields.club)">{{r.fields.club}}</td>
+      <td class="votant" ng-click="searchValue(r.fields.name)">{{r.fields.name}}</td>
+      <td class="votant" ng-click="searchValue(r.fields.vote)">{{r.fields.vote}}</td>
+      <td class="votant" ng-click="searchValue(r.fields.country)">{{r.fields.country}}</td>
+      <td class="votant" ng-click="searchValue(r.fields.continent)">{{r.fields.continent}}</td>
+    </tr>
+  </table>
+  </div>
+</div>
+
+<header-opacity></header-opacity>
+
+<footer class="footer" id="footer">
+
+     <a href="https://www.facebook.com/"><i class="fa fa-facebook-square"></i></a></br>
+  <span class="copyright">&copy; Untitled. All rights reserved. Design: Thomas Creplet & Emmanuel Le Rider.</span>
+
+      
+</footer>
+
+</html>

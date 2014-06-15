@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+    <h2>Liste des votes</h2>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+        <tr > 
+            <th ng-repeat="(i,facet) in voies.parameters.facet"><button type="button" class="btn btn-success">{{voies.parameters.facet[i]}}</button></th>
+        </tr> 
+    <tr  ng-repeat="(i,fields) in voies.records">
+      <td>{{voies.records[i].fields.joueur}}</td>
+      <td>{{voies.records[i].fields.name}}</td>
+      <td>{{voies.records[i].fields.point}}</td>
+      <td>{{voies.records[i].fields.club}}</td>
+      <td>{{voies.records[i].fields.country}}</td>
+      <td>{{voies.records[i].fields.vote}}</td>
+      <td>{{voies.records[i].fields.poste}}</td>
+      <td>{{voies.records[i].fields.continent}}</td>
+    </tr>
+  </table>
+</div>

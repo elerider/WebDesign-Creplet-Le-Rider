@@ -1,0 +1,121 @@
+<div class="header" id="header">
+  <div class="col-md-4">
+    <div class="titleHeader">
+        <a href="#/home">FIFA Ballon d'Or   <small><span class="label label-warning">2013</span></small></a>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class = "buttons">
+      <ul class="nav nav-pills nav-justified">
+        <li><a href="#/home">Accueil</a></li>
+        <li><a href="#/votes">Votes</a></li>
+        <li class="active"><a href="#/graph">Graphiques</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<body>
+</br></br></br>
+<div class="col-md-12">
+  <div class="legende">
+    <img id="ronaldo"src="../images/ronaldo.png" width="90" height="90">
+    <img id="messi" src="../images/messi.png" width="90" height="90">
+    <img id="ribery" src="../images/ribery.png" width="90" height="90">
+  </div>
+</div>
+
+ <div class="col-md-12">
+          </br></br>
+  </div>
+ 
+
+  <div class="col-md-12">
+    <div  id"getGraph">
+      <button class="button" ng-click="getChart()">Afficher les graphiques</i> </button>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+          </br></br>
+</div>  
+<div class="col-md-12"> 
+  <div id="mainArticle">
+  <h2></br>Classement des joueurs<br /></h2>
+            <p>Le nombre de point concernant les trois joueurs ayant réunis le plus de voies sont comparés dans le graphique ci-dessous<br />Plusieurs données sont comparées: le <strong>nombre de point total</strong>, le nombre de point attribué par une <strong>première place</strong> , une <strong>seconde place</strong>, ou une <strong>troisième place</strong><br />
+  </div>
+</div>
+
+  <canvas class ="graph" id="myChart4" width="800" height="800"></canvas>
+
+
+  <div class="col-md-12">
+          </br>
+  </div>
+  <div class ="legende">
+    <div class="col-md-3">
+      <canvas id="myCanvas5"></canvas> <strong>Première place</strong>
+
+    </div>
+    <div class="col-md-3">
+      <canvas id="myCanvas6"></canvas> <strong>Seconde place</strong>
+    </div>
+    <div class="col-md-3">
+      <canvas id="myCanvas7"></canvas> <strong>Troisième place</strong> 
+    </div>
+    <div class="col-md-3">
+      <canvas id="myCanvas8"></canvas> <strong>Total</strong>
+    </div>
+  </div>
+
+
+<div class="col-md-12">
+          </br></br></br></br></br></br>
+  </div>
+<div class="col-md-12">
+  <div id="mainArticle">
+    <h2>Répartition des voies<br /></h2>
+          <p>Pour chaque pays, il éxiste trois catégories de votants: les capitaines des sélections nationales, les selectionneurs nationaux, et un représentant des médias<br />Chaque votant doit classer les trois meilleurs joueurs de la saison<br />
+  </div>
+</div>
+<div class="col-md-12">
+          </br></br>
+  </div>
+<div class="col-md-4">
+  <h3 id="mainArticle">Répartition des 1ères places</h3>
+        <canvas class ="graph" id="myChart1" width="250" height="250"></canvas>
+</div>
+<div class="col-md-4">
+  
+   <h3 id="mainArticle">Répartition des 2nd places</h3>  
+        <canvas class ="graph" id="myChart2" width="250" height="250"></canvas>
+</div>
+<div class="col-md-4">
+  <h3 id="mainArticle">Répartition des 3èmes places</h3>
+        <canvas class ="graph" id="myChart3" width="250" height="250"></canvas>
+  </div>
+<div class="col-md-12">
+          </br>
+  </div>
+<div class="col-md-12">
+<div class="legende">
+        <canvas id="myCanvas1"></canvas> Ronaldo
+        <canvas id="myCanvas2"></canvas> Messi
+        <canvas id="myCanvas3"></canvas> Ribery
+        <canvas id="myCanvas4"></canvas> Autres
+      </div>
+  </div>
+ <header-opacity></header-opacity>
+
+<div class="col-md-12">
+          </br></br></br>
+  </div>
+</body>
+<footer class="footer" id="footer">
+  <div class="col-md-12">
+    <a href="https://www.facebook.com/"><i class="fa fa-facebook-square"></i></a></br>
+    <span class="copyright">&copy; Untitled. All rights reserved. Design: Thomas Creplet & Emmanuel Le Rider.</span>
+  </div>
+      
+</footer>

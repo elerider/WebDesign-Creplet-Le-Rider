@@ -1,0 +1,13 @@
+<script type="text/javascript">
+var scroll = $(window).scrollTop();
+$(window).scroll(function(){
+
+        console.info('YOEMAN !');
+   if($(window).scrollTop()<20){
+         document.getElementById('header').style.opacity = 1-($(window).scrollTop()*0.025);
+
+   } else {
+         document.getElementById('header').style.opacity = .5;
+   }
+});
+</script>
